@@ -1,6 +1,6 @@
 {
   "name": "wt-house111",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "lodash": "^4.17.20",
-    "wt-window111": "^0.0.6"
+    "wt-window111": "^0.0.7"
   },
   "gitHead": "527642cab2cbe0cd80c9bdb82369e4bf7bf202f8"
 }
