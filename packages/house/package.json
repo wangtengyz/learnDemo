@@ -1,5 +1,5 @@
 {
-  "name": "@lernawang/house",
+  "name": "wt-house",
   "version": "0.0.2",
   "description": "",
   "main": "index.js",
@@ -13,7 +13,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@lernawang/window": "^0.0.2",
+    "wt-window": "^0.0.2",
     "lodash": "^4.17.20"
   },
   "gitHead": "5291797d24ae25c1747bb407df6d4db4c304e8e5"
