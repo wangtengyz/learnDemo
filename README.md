@@ -184,6 +184,10 @@ $ lerna exec -- rm -rf ./node_modules
 $ lerna exec -- protractor conf.js
 lerna exec --scope my-component -- ls -la
 ```
+该命令手动将缺少的版本发布到npm已经正确发布的版本上，并以静默方式失败：
+```
+lerna exec -- "npm publish || exit 0"
+```
 
 ### lerna link
 项目包建立软链，类似npm link
@@ -209,6 +213,11 @@ lerna success found 1 package ready to publish
 ```
 
 ### lerna publish
+
+重点注意遇到403错误请重新登录npm
+```
+npm login
+```
 会打tag，上传git,上传npm。
 如果你的包名是带scope的例如："name": "@gp0320/gpwebpack",
 那需要在packages.json添加
@@ -262,3 +271,16 @@ command.bootstrap.ignore：指定不受 bootstrap 命令影响的包
 command.bootstrap.npmClientArgs：指定默认传给 lerna bootstrap 命令的参数  
 command.bootstrap.scope：指定那些包会受 lerna bootstrap 命令影响  
 packages：指定包所在的目录  
+
+## 最佳实践 toDo
+```
+采用Independent模式
+根据Git提交信息，自动生成changelog
+eslint规则检查
+prettier自动格式化代码
+提交代码，代码检查hook
+遵循semver版本规范
+```
+大家应该也可以看出来，在开发这种工程的过程的，最为重要的一点就是规范。
+
+因为应用场景各种各样，你必须保证发布的packge是规范的，代码是规范的，一切都是有迹可循的。这点我认为是非常重要的。
