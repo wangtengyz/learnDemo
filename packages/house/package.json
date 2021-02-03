@@ -1,5 +1,5 @@
 {
-  "name": "wt-house",
+  "name": "wt-house111",
   "version": "0.0.4",
   "description": "",
   "main": "index.js",
@@ -14,6 +14,6 @@
   },
   "dependencies": {
     "lodash": "^4.17.20",
-    "wt-window": "^0.0.4"
+    "wt-window111": "^0.0.4"
   }
 }
