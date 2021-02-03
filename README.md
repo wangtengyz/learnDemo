@@ -66,9 +66,6 @@ lerna.json文件里面"version": "independent"
     │   └── package.json
     ├── window
         └── package.json
-
-
-4 directories, 5 files
 ```
 
 ## 设置
