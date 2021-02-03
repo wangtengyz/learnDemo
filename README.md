@@ -39,19 +39,17 @@ lerna.json文件里面"version": "independent"
 
 ```
     $ npm install lerna -g
-    $ mkdir lerna-gp && cd $_
+    $ mkdir lerna-demo && cd $_
     $ npm lerna init # 用的默认的固定模式，vue babel等都是这个
     
      # Add packages
     $ cd packages
-    $ mkdir daybyday gpnode gpwebpack
+    $ mkdir house window
     ...
-    #分别进入三个目录初始化成包
-    $ cd daybyday
+    #分别进入两个目录初始化成包
+    $ cd house
     $ npm init -y 
-    $ cd ../gpnode
-    $ npm init -y
-    $ cd ../gpwebpack
+    $ cd ../window
     $ npm init -y
 
 ```
@@ -64,12 +62,11 @@ lerna.json文件里面"version": "independent"
 ├── lerna.json
 ├── package.json
 └── packages
-    ├── daybyday
+    ├── house
     │   └── package.json
-    ├── gpnode
-    │   └── package.json
-    └── gpwebpack
+    ├── window
         └── package.json
+
 
 4 directories, 5 files
 ```
@@ -98,7 +95,7 @@ Logged in as XXX on https://registry.npmjs.org/. # succeed
 
 ```
 # package.json 文件加入
- "private": true,
+ "private": true, // 这个可加可不加，按需求来，应该是私有包的意思
   "workspaces": [
     "packages/*"
   ],
@@ -135,19 +132,19 @@ lerna create gpnote packages/XXX
 * --exact 安装准确版本，就是安装的包版本前面不带^, Eg: "^2.20.0" ➜ "2.20.0"
 
 ```
-# Adds the module-1 package to the packages in the 'prefix-' prefixed folders
+# 将module-1包添加到以“prefix-”为前缀的文件夹中的包中
 lerna add module-1 packages/prefix-*
 
-# Install module-1 to module-2
+# 安装模块1到模块2
 lerna add module-1 --scope=module-2
 
-# Install module-1 to module-2 in devDependencies
+# 安装模块1到模块2 开发依赖
 lerna add module-1 --scope=module-2 --dev
 
-# Install module-1 in all modules except module-1
+# 在除module-1外的所有模块中安装module-1
 lerna add module-1
 
-# Install babel-core in all modules
+# 在所有模块中安装babel-core
 lerna add babel-core
 ```
 
@@ -160,11 +157,9 @@ lerna add babel-core
 ```
 ➜  lerna-gp git:(master) ✗ lerna list
 lerna notice cli v3.14.1
-daybyday
-gpnode
-gpnote
-gpwebpack
-lerna success found 4 packages
+house
+window
+lerna success found 2 packages
 ```
 
 ### lerna import <path-to-external-repository>
