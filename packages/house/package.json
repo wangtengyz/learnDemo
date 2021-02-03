@@ -15,6 +15,5 @@
   "dependencies": {
     "lodash": "^4.17.20",
     "wt-window": "^0.0.3"
-  },
-  "gitHead": "5291797d24ae25c1747bb407df6d4db4c304e8e5"
+  }
 }
